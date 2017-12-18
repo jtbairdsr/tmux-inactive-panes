@@ -27,6 +27,6 @@ update_status_bar() {
 	done
 
 	nvim --headless --cmd 'let colorchange=1' -c "$nvim_command | TmuxlineSnapshot! ~/.tmux-line.conf | qall"
-	tmux source-file ~/.tmux.conf
+	tmux source-file ~/.tmux-line.conf
 
 }
