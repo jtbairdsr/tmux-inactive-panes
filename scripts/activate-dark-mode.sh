@@ -22,7 +22,9 @@ tmux set -g pane-border-fg "$inactive_fg"
 tmux set -g pane-active-border-bg "$active_bg"
 tmux set -g pane-active-border-fg "$active_fg"
 
-update_status_bar dark
+if [ -z "$1" ]; then
+	update_status_bar dark
+fi
 
 new_command="$CWD/activate-light-mode.sh"
 if [ -z "$prefix" ]; then

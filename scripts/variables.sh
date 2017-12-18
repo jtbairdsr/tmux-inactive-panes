@@ -5,6 +5,8 @@ default_inactive_toggle_prefix=""
 inactive_toggle_prefix_option="@toggle-inactive-prefix"
 
 # =================================================== Colors ========================================================= #
+default_inactive_colorscheme="light"
+inactive_colorscheme_option="@default-inactive-color"
 
 # ---------------------------------------------------- Dark -----------------------------------------------------------
 default_active_bg_color_dark="colour8"
