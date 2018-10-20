@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-if [ -z "$(tmux show-option -gqv @tmux-inactive-panes-initialize)" ]; then
+if [ -z "$(tmux show-option -gqv @tmux-inactive-panes-initialized)" ]; then
 	CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 	# shellcheck source=./scripts/variables.sh
