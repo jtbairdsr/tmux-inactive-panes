@@ -16,6 +16,11 @@ get_tmux_option() {
 }
 
 update_status_bar() {
+	ex "+%s/@colors-solarized.*/@colors-solarized '$1'" -scwq ~/.tmux.conf
+ 	ex "+%s/set background=.*/set background=$1/ge" -scwq ~/.config/nvim/init.vim
+	# rm ~/.tmux.conf.bak
+	# tmux set -g @colors-solarized "$1"
+
 	local servers nvim_command
 
 	nvim_command=":set background=$1"
@@ -29,5 +34,4 @@ update_status_bar() {
 	nvim --headless --cmd 'let colorchange=1' -c "$nvim_command | TmuxlineSnapshot! ~/.tmux-line.conf | qall"
 	tmux source-file ~/.tmux.conf
 
-	tmux set -g @colors-solarized "$1"
 }

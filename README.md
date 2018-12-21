@@ -19,3 +19,7 @@ between light and dark verions of the color scheme on the fly.
 | @inactive-fg-color-dark  | foreground color of inactive pane borders (dark)      | color10  |
 | @inactive-bg-color-light | background color of inactive panes (light)            | colour7  |
 | @inactive-fg-color-light | foreground color of inactive pane borders (light)     | colour14 |
+
+
+##dependencies
+requires neovim-remote on the users path in order to update current instantces of neovim
