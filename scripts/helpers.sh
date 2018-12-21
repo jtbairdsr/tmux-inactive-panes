@@ -29,4 +29,5 @@ update_status_bar() {
 	nvim --headless --cmd 'let colorchange=1' -c "$nvim_command | TmuxlineSnapshot! ~/.tmux-line.conf | qall"
 	tmux source-file ~/.tmux.conf
 
+	tmux set -g @colors-solarized "$1"
 }

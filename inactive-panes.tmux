@@ -8,9 +8,9 @@ if [ -z "$(tmux show-option -gqv @tmux-inactive-panes-initialized)" ]; then
 	# shellcheck source=./scripts/helpers.sh
 	. "$CURRENT_DIR/scripts/helpers.sh"
 
-	colorscheme=$(get_tmux_option "$inactive_colorscheme_option" "$default_inactive_colorscheme")
+	inactiveColorscheme=$(get_tmux_option "$inactive_colorscheme_option" "$default_inactive_colorscheme")
 
-	if [ "$colorscheme" == 'light' ]; then
+	if [ "$inactiveColorscheme" == 'light' ]; then
 		# shellcheck source=./scripts/helpers.sh
 		. "$CURRENT_DIR/scripts/activate-light-mode.sh" 1
 	else
